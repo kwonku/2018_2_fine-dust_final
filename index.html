@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>미세먼지</title>
+	<link href="https://fonts.googleapis.com/css?family=Cinzel:700" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Cormorant+Garamond" rel="stylesheet">
+	<link rel="stylesheet" type="text/css" href="normalize.css">
+	<style>
+	#sky{position: absolute; margin: auto; left: -1px; top: 0%; width : 100%;
+		animation: arrow 2s forwards;}
+	#ground{position: absolute; left : -1px; bottom: 0%; width: 100%;
+		animation: arrow 2s forwards;}
+	#factory1{position: absolute; margin: auto; left: 0px; bottom: 22.5%; width: 40%;
+		animation: intro 2s forwards; cursor:pointer;}
+		#factory1:hover{ width: 42%;}
+		#factory11{display:none; position: absolute; top: 0px; left: 0px; width: 100%; height: 100%;}
+	#factory2{position: absolute; margin: auto; left: 26.6%; bottom: 29%; width: 45%;
+		animation: intro 3s forwards; cursor:pointer;}
+		#factory2:hover{ width: 47%; }
+		#factory22{display:none; position: absolute; top: 0px; left: 0px; width: 100%; height: 100%;}
+	#factory3{position: absolute; margin: auto; left: 67.4%; bottom: 28.3%; width: 32.5%;
+		animation: intro 4s forwards; cursor:pointer;}
+		#factory3:hover{ width: 34.5%; left: 65%;}
+		#factory33{display:none; position: absolute; top: 0px; left: 0px; width: 100%; height: 100%;}
+	#road{position: absolute; margin: auto; left: 26%; bottom: 0px; width: 50%;
+		animation: intro 5s forwards; cursor:pointer;}
+		#road:hover{ width: 52%; left: 25%;}
+		#road2{display:none; position: absolute; top: 0px; left: 0px; width: 100%; height: 100%;}
+	#car1{position: absolute; margin: auto; left: 39.7%; bottom: 4.7%; width: 9.8%; 
+		animation: intro 6s forwards; cursor:pointer;}
+		#car1:hover{ width: 10.8%; left: 39.5%;}
+		#car11{display:none; position: absolute; top: 0px; left: 0px; width: 100%; height: 100%;}
+	#car2{position: absolute; margin: auto; left: 48.7%; bottom: 25.6%; width: 5.3%;
+		animation: intro 7s forwards; cursor:pointer;}
+		#car2:hover{ width: 6.3%; left: 48%;}
+		#car22{display:none; position: absolute; top: 0px; left: 0px; width: 100%; height: 100%;}
+	#arrows{position: absolute; margin: auto; left: 55%; bottom: 16%;
+		animation: intro 8s forwards;}
+
+	#title{position: absolute; margin : auto; width: 300px; height: 200px; left: 50px; top: 10px;}
+	#last{position: absolute; margin : auto; width: 1535px; height: 719px; left: 0px; top: -70px;
+			animation:intro 3s forwards; animation-play-state: paused;}
+
+	#미세먼지ex{width: 30%; position: absolute; left: 70%; top: 0%; opacity: 0;}
+	#석탄ex{width: 30%; position: absolute; left: 70%; top: 0%; opacity: 0;}
+	#소각장ex{width: 30%; position: absolute; left: 70%; top: 0%; opacity: 0;}
+	#자동차ex1{width: 30%; position: absolute; left: 70%; top: 0%; opacity: 0;}
+	#자동차ex2{width: 30%; position: absolute; left: 70%; top: 0%; opacity: 0;}
+	#도로ex{width: 30%; position: absolute; left: 70%; top: 0%; opacity: 0;}
+
+
+	h1.a{font-family: 'Cinzel', serif; font-size: 30px; color: white; position: absolute;
+		animation:  title 15s forwards;}
+	h2.a{font-family: 'Cormorant Garamond', serif; font-size: 102.5px; color: red; position: absolute;}
+
+	@keyframes intro{
+			0%{opacity:0;}
+			50%{opacity: 0;}
+			100%{opacity: 1;}}
+	@keyframes arrow{
+			0%{opacity: 0;}
+			100%{opacity: 1;}}
+
+	@keyframes title{
+			0%{opacity: 0;}
+			40%{opacity: 1;}
+			80%{opacity: 1;}
+			100%{opacity: 0;}}
+
+	}
+
+
+	</style>
+</head>
+<body>
+
+	<img src="sky.png" id="sky">
+
+	<img src="ground.png" id="ground">
+
+	<div id="last">
+		<h2 class="a">
+	Human beings wanted to live a better life. And the industrial revolution has improved the quality of life.<br>
+	Ironically, We want to live <br>but we are dying.</h2>
+	</div>
+
+	<div id="title">
+		<h1 class="a">Please get out<br>FINE DUST</h1>
+	</div>
+
+	<img src="road.png" id="road">
+	<img src="도로.gif" id="road2">
+
+	<img src="factory2.png" id="factory2">
+	<img src="공장2.gif" id="factory22">
+
+	<img src="factory3.png" id="factory3">
+	<img src="공장3.gif" id="factory33">
+
+	<img src="factory1.png" id="factory1">
+	<img src="공장1.gif" id="factory11">
+
+	<img src="car1.png" id="car1">
+	<img src="차1.gif" id="car11">
+
+	<img src="car2.png" id="car2">
+	<img src="차2.gif" id="car22">
+
+	<img src="화살표.gif" id="arrows">
+
+	<img src="미세먼지ex.png" id="미세먼지ex">
+	<img src="석탄ex.png" id="석탄ex">
+	<img src="소각장ex.png" id="소각장ex">
+	<img src="자동차ex1.png" id="자동차ex1">
+	<img src="자동차ex2.png" id="자동차ex2">
+	<img src="도로ex.png" id="도로ex">
+
+
+
+	<script type="text/javascript">
+		road.onclick = function(){
+			road2.style.display = "block";
+			road.style.display = "none";
+			arrows.style.left = "46.8%";
+			arrows.style.bottom = "93%";
+		}
+
+		factory2.onclick = function(){
+			factory22.style.display = "block";
+			factory2.style.display = "none";
+			arrows.style.left = "85%";
+			arrows.style.bottom = "73%";
+		}
+
+		factory3.onclick = function(){
+			factory33.style.display = "block";
+			factory3.style.display = "none";
+			arrows.style.left = "20%";
+			arrows.style.bottom = "65%";
+		}
+
+		factory1.onclick = function(){
+			factory11.style.display = "block";
+			factory1.style.display = "none";
+			arrows.style.left = "41.5%";
+			arrows.style.bottom = "23%";
+		}
+
+		car1.onclick = function(){
+			car11.style.display = "block";
+			car1.style.display = "none";
+			arrows.style.left = "49.7%";
+			arrows.style.bottom = "34%";
+
+
+		}
+
+		car2.onclick = function(){
+			car22.style.display = "block";
+			car2.style.display = "none";
+			arrows.style.bottom = "100%";
+			last.style.animationPlayState = "running";
+		}
+
+
+
+
+		road.onmouseover =  function(){
+			도로ex.style.opacity = "1";
+			}
+		road.onmouseout =  function(){
+			도로ex.style.opacity = "0";
+			}
+
+		factory2.onmouseover =  function(){
+			소각장ex.style.opacity = "1";
+			}
+		factory2.onmouseout =  function(){
+			소각장ex.style.opacity = "0";
+			}
+
+		factory3.onmouseover =  function(){
+			미세먼지ex.style.opacity = "1";
+			}
+		factory3.onmouseout =  function(){
+			미세먼지ex.style.opacity = "0";
+			}
+			
+		factory1.onmouseover =  function(){
+			석탄ex.style.opacity = "1";
+			}
+		factory1.onmouseout =  function(){
+			석탄ex.style.opacity = "0";
+			}
+			
+		car1.onmouseover =  function(){
+			자동차ex1.style.opacity = "1";
+			}
+		car1.onmouseout =  function(){
+			자동차ex1.style.opacity = "0";
+			}
+			
+		car2.onmouseover =  function(){
+			자동차ex2.style.opacity = "1";
+			}
+		car2.onmouseout =  function(){
+			자동차ex2.style.opacity = "0";
+			}
+
+
+	</script>
+
+
+</body>
+</html>
